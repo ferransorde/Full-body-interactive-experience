@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagFilter: Player
-  player1: {fileID: 0}
+  player1: {fileID: 4268448556170648936, guid: 853868f8ed9b2f94e83bd180ecdf242b, type: 3}
 --- !u!54 &5068989203903188980
 Rigidbody:
   m_ObjectHideFlags: 0

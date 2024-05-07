@@ -25,19 +25,10 @@ public class PlayerMovement : MonoBehaviour
         Vector3 newPos;
         transform.position = pos;
 
-        switch(name){
-            case "Player1":
-                newPos = new Vector3(Mathf.Clamp(pos.x, 0, 50), pos.y, pos.z);
-                break;
-            case "Player2":
-                newPos = new Vector3(Mathf.Clamp(pos.x, 50, 100), pos.y, pos.z);
-                break;
-            default:
-                newPos = pos;
-                break;
-        }
+        
+        
 
-        transform.position = newPos;
+        //transform.position = newPos;
 
         
     }
