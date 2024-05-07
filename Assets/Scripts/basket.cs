@@ -6,7 +6,8 @@ public class basket : MonoBehaviour
 {
     public string tagFilter;
     bool follow = false;
-    public GameObject player1;
+    public GameObject ball;
+    private BallSpawner ballSpawner;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,8 @@ public class basket : MonoBehaviour
     {
         if (other.CompareTag(tagFilter)) 
         {
-            Destroy(gameObject);
+            Destroy(ball);
+            ballSpawner.RemoveBallFromList(gameObject);
         }
     }
 }

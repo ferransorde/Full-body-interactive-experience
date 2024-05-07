@@ -7,6 +7,8 @@ public class Ball : MonoBehaviour
     public string tagFilter;
     bool follow = false;
     public GameObject player1;
+    private BallSpawner ballSpawner;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,13 @@ public class Ball : MonoBehaviour
         if (other.CompareTag(tagFilter)) 
         {
             follow = true;
+            
         }
     }
+
+    public void SetSpawner(BallSpawner spawner)
+    {
+        ballSpawner = spawner;
+    }
+
 }
