@@ -33,10 +33,11 @@ public class basket : MonoBehaviour
     {
         if (other.CompareTag(tagFilter)) 
         {
-            count1+=1;
-            SetCountText();
             Destroy(ball);
             ballSpawner.RemoveBallFromList(gameObject);
+            count1+=1;
+            SetCountText();
+            
         }
     }
 }
