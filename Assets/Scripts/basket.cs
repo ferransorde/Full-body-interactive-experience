@@ -24,9 +24,9 @@ public class basket : MonoBehaviour
         
     }
 
-void SetCountText(){
-    countdisplay1.text ="Points: " + count1.ToString();
-}
+    void SetCountText(){
+        countdisplay1.text ="Points: " + count1.ToString();
+    }
     
 
     private void OnTriggerEnter (Collider other) 
