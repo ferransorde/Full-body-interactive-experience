@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class basket : MonoBehaviour
+public class basket2 : MonoBehaviour
 {
     public string tagFilter;
     bool follow = false;
     public GameObject ball;
     public BallSpawner ballSpawner;
-    public TextMeshProUGUI countdisplay1;
-    public int Count1 { get { return count1; } }
-    private int count1;
+    public TextMeshProUGUI countdisplay2;
+    public int Count2 { get { return count2; } }
+    private int count2;
     
     
 
@@ -28,7 +28,7 @@ public class basket : MonoBehaviour
     }
 
     void SetCountText(){
-        countdisplay1.text ="Points: " + count1.ToString();
+        countdisplay2.text ="Points: " + count2.ToString();
     }
     
 
@@ -38,11 +38,11 @@ public class basket : MonoBehaviour
         {
             Destroy(ball);
             ballSpawner.RemoveBallFromList(gameObject);
-            count1+=1;
+            count2+=1;
             SetCountText();
             
         }
     }
 
-  
+    
 }
