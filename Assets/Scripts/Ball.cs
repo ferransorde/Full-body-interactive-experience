@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour
 {
     public string tagFilter;
     bool follow = false;
+    bool with_ball = false;
     public GameObject player1;
     private BallSpawner ballSpawner;
 
@@ -29,11 +30,21 @@ public class Ball : MonoBehaviour
 
     private void OnTriggerEnter (Collider other) 
     {
-        if (other.CompareTag(tagFilter)) 
-        {
-            follow = true;
-            
+        if(!with_ball){
+            if (other.CompareTag(tagFilter)) 
+            {
+                follow = true;
+                with_ball = true;
+            }
         }
+
+        if(gameObject == null){
+            with_ball = false;
+        }
+    }
+
+    private void destroyed(){
+        
     }
 
     public void SetSpawner(BallSpawner spawner)
