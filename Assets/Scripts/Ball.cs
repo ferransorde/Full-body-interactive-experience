@@ -21,6 +21,7 @@ public class Ball : MonoBehaviour
     {
         if(follow){
             transform.position = player1.transform.position;
+            
         }
     }
 
