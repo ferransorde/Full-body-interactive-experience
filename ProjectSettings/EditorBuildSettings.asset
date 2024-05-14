@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: 7caa62cc387295b4f914c27933b17bf5
   - enabled: 1
-    path: Assets/Scenes/Winner1.unity
+    path: Assets/Scenes/Winner1_Tie.unity
     guid: 5563df32dbc7e73419c54abd1c99d9d5
+  - enabled: 1
+    path: Assets/Scenes/Winner1_BluePlayer.unity
+    guid: 60c7e2d255004a840b145a9fd2fb85b6
+  - enabled: 1
+    path: Assets/Scenes/Winner1_RedPlayer.unity
+    guid: e3dfa6a42737a4842971044d9679a356
   m_configObjects: {}
