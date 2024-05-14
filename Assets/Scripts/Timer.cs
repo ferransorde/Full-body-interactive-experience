@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour {
     public float timeValue = 120; 
     TextMesh timerText;
+    public string LevelToLoad;
 
     void Start () {
         timerText = GetComponent<TextMesh>();
@@ -25,7 +26,7 @@ public class Timer : MonoBehaviour {
     void DisplayTime(float timeToDisplay){
         if(timeToDisplay< 0){
             timeToDisplay=0;
-            Destroy(gameObject);
+            Application.LoadLevel(LevelToLoad);
         }else if(timeToDisplay>0){
             timeToDisplay+=1;
         }
