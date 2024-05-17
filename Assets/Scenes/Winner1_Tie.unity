@@ -4653,7 +4653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeValue: 5
-  LevelToLoad: Welcome
+  LevelToLoad: Level3
 --- !u!102 &1169000984
 TextMesh:
   serializedVersion: 3
