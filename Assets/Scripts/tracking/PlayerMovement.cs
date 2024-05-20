@@ -8,11 +8,12 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     public Quaternion q;
     public bool manual;
-    bool with_ball = false;
+    public bool with_ball = false;
+    public string tagFilter;
 
     void Start()
     {
-
+        with_ball = false;
     }
 
     // Update is called once per frame
@@ -32,6 +33,11 @@ public class PlayerMovement : MonoBehaviour
 
         //transform.position = newPos;
 
+        
+    }
+
+    private void OnTriggerEnter (Collider other) 
+    {
         
     }
 

@@ -8,7 +8,7 @@ public class basket2 : MonoBehaviour
     public string tagFilter;
     bool follow = false;
     public GameObject ball;
-    public BallSpawner ballSpawner;
+    public BallSpawnerBlue ballSpawner;
     public TextMeshProUGUI countdisplay2;
     public int Count2 { get { return count2; } }
     private int count2;

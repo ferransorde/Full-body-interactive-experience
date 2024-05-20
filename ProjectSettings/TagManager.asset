@@ -8,6 +8,9 @@ TagManager:
   - BlendPlane1
   - Ball
   - Red_ball
+  - Player_1
+  - Player_2
+  - Blue_ball
   layers:
   - Default
   - TransparentFX

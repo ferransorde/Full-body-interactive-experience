@@ -2,26 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public class BlueBall : MonoBehaviour
 {
     public string tagFilter;
     bool follow = false;
     bool with_ball = false;
-    public GameObject player1;
-    private BallSpawner ballSpawner;
+    public GameObject player2;
+    private BallSpawnerBlue ballSpawner;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        player1 = GameObject.Find("Player1");
+        player2 = GameObject.Find("Player2");
     }
 
     // Update is called once per frame
     void Update()
     {
         if(follow){
-            transform.position = player1.transform.position;
+            transform.position = player2.transform.position;
             
         }
     }
@@ -47,7 +47,7 @@ public class Ball : MonoBehaviour
         
     }
 
-    public void SetSpawner(BallSpawner spawner)
+    public void SetSpawner(BallSpawnerBlue spawner)
     {
         ballSpawner = spawner;
     }

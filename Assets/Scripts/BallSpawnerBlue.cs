@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallSpawner : MonoBehaviour
+public class BallSpawnerBlue : MonoBehaviour
 {
     public bool canSpawn = true; 
     public GameObject ballPrefab; 
@@ -26,11 +26,11 @@ public class BallSpawner : MonoBehaviour
     private void SpawnBall()
     {
         Vector3 randomPosition = ballSpawnPositions[Random.Range(0,
-        ballSpawnPositions .Count)].position; 
+        ballSpawnPositions.Count)].position; 
         GameObject ball = Instantiate(ballPrefab, randomPosition ,
         ballPrefab.transform.rotation); 
         ballList.Add(ball); 
-        ball.GetComponent<Ball>().SetSpawner(this); 
+        ball.GetComponent<BlueBall>().SetSpawner(this); 
     }
 
     private IEnumerator SpawnRoutine() 
