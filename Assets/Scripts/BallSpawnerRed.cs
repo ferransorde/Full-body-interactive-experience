@@ -7,7 +7,10 @@ public class BallSpawnerRed : MonoBehaviour
     public bool canSpawn = true; 
     public GameObject ballPrefab; 
     public List<Transform> ballSpawnPositions = new List<Transform>(); 
-    public float timeBetweenSpawns ;
+    public float minTimeBetweenSpawns = 1f;
+    public float maxTimeBetweenSpawns = 3f;
+    public float spawnOffsetRange = 1f;
+    //public float timeBetweenSpawns ;
     private List<GameObject> ballList = new List<GameObject>();
     private Dictionary<Transform, bool> spawnPointOccupied = new Dictionary<Transform, bool>();
 
@@ -31,25 +34,27 @@ public class BallSpawnerRed : MonoBehaviour
 
     private void SpawnBall()
     {
-        Transform spawnPoint = null;
+        // Find all unoccupied spawn points
+        List<Transform> availableSpawnPoints = new List<Transform>();
         foreach (var point in ballSpawnPositions)
         {
             if (!spawnPointOccupied[point])
             {
-                spawnPoint = point;
-                break;
+                availableSpawnPoints.Add(point);
             }
         }
 
-        //Vector3 randomPosition = ballSpawnPositions[Random.Range(0,
-        //ballSpawnPositions.Count)].position; 
-        /**GameObject ball = Instantiate(ballPrefab, randomPosition ,
-        ballPrefab.transform.rotation); 
-        ballList.Add(ball); 
-        ball.GetComponent<RedBall>().SetSpawner(this); **/
-        if (spawnPoint != null)
+        if (availableSpawnPoints.Count > 0)
         {
-            Vector3 spawnPosition = spawnPoint.position;
+            // Select a random unoccupied spawn point
+            Transform spawnPoint = availableSpawnPoints[Random.Range(0, availableSpawnPoints.Count)];
+            // Add a random offset within the defined range
+            Vector3 spawnOffset = new Vector3(
+                Random.Range(-spawnOffsetRange, spawnOffsetRange),
+                0,
+                Random.Range(-spawnOffsetRange, spawnOffsetRange)
+            );
+            Vector3 spawnPosition = spawnPoint.position + spawnOffset;
             GameObject ball = Instantiate(ballPrefab, spawnPosition, ballPrefab.transform.rotation);
             ballList.Add(ball);
             ball.GetComponent<RedBall>().SetSpawner(this);
@@ -65,7 +70,7 @@ public class BallSpawnerRed : MonoBehaviour
         while (canSpawn) 
         {
             SpawnBall(); 
-            yield return new WaitForSeconds(timeBetweenSpawns); 
+            yield return new WaitForSeconds(Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns));
         }
     }
 

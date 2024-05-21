@@ -13,6 +13,11 @@ public class ExtraPoints : MonoBehaviour
     private int countply3=0;
     private int countply4=0;
 
+    void start(){
+        //player3 = GameObject.Find("Player3");
+        //altura = player3.transform.position.y;
+    }
+
     //quan player entra al cube si isplayeroncube es false 
 
     void OnTriggerEnter(Collider other)

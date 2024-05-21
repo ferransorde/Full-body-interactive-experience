@@ -36,7 +36,7 @@ public class basket2 : MonoBehaviour
     {
         if (other.CompareTag(tagFilter)) 
         {
-            Destroy(ball);
+            Destroy(other.gameObject);
             ballSpawner.RemoveBallFromList(gameObject);
             count2+=1;
             SetCountText();

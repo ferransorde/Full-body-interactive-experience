@@ -17,7 +17,7 @@ public class RedBall : MonoBehaviour
     {
         player1 = GameObject.Find("Player1");
         playerScript = player1.GetComponent<PlayerMovement>();
-        playerScript.with_ball = false;
+    
       
     }
 
@@ -43,6 +43,7 @@ public class RedBall : MonoBehaviour
     private void OnDestroy(){
 
         if (playerScript != null){
+            follow = false;
             playerScript.with_ball = false;
         }
         

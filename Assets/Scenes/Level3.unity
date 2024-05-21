@@ -2245,6 +2245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 0
+  with_ball: 0
+  tagFilter: 
 --- !u!65 &483883240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2798,7 +2800,7 @@ MonoBehaviour:
   cameras:
   - {fileID: 342261394}
   - {fileID: 2041817079}
-  enableTracking: 0
+  enableTracking: 1
   numberOfPlayers: 4
   numberOfBaseStations: 4
   screenToWorldPosTracking: 1
@@ -3507,6 +3509,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 0
+  with_ball: 0
+  tagFilter: 
 --- !u!65 &763629981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3604,7 +3608,9 @@ MonoBehaviour:
   tagFilter: Ball
   ball: {fileID: 0}
   ballSpawner: {fileID: 794735726}
+  player1: {fileID: 0}
   countdisplay1: {fileID: 1291196193}
+  playerScript: {fileID: 0}
 --- !u!135 &778428848
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3717,7 +3723,9 @@ MonoBehaviour:
   - {fileID: 1804521658}
   - {fileID: 85834967}
   - {fileID: 653196749}
-  timeBetweenSpawns: 5
+  minTimeBetweenSpawns: 1
+  maxTimeBetweenSpawns: 3
+  spawnOffsetRange: 1
 --- !u!4 &794735727
 Transform:
   m_ObjectHideFlags: 0
@@ -3798,7 +3806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagFilter: Ball
   ball: {fileID: 0}
-  ballSpawner: {fileID: 794735726}
+  ballSpawner: {fileID: 0}
   countdisplay2: {fileID: 121040941}
 --- !u!135 &940637692
 SphereCollider:
@@ -4330,6 +4338,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 0
+  with_ball: 0
+  tagFilter: 
 --- !u!65 &1151668550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4733,7 +4743,7 @@ GameObject:
   - component: {fileID: 1264190560}
   m_Layer: 0
   m_Name: Player4
-  m_TagString: Player
+  m_TagString: Player_extra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4828,6 +4838,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 0
+  with_ball: 0
+  tagFilter: 
 --- !u!1 &1266383783
 GameObject:
   m_ObjectHideFlags: 0
@@ -5432,6 +5444,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 1
+  with_ball: 0
+  tagFilter: 
 --- !u!65 &1440896349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6024,6 +6038,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 0
+  with_ball: 0
+  tagFilter: 
 --- !u!1 &1483708435
 GameObject:
   m_ObjectHideFlags: 0
@@ -6341,6 +6357,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 0
+  with_ball: 0
+  tagFilter: 
 --- !u!65 &1554760528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7169,6 +7187,7 @@ GameObject:
   - component: {fileID: 1698728103}
   - component: {fileID: 1698728102}
   - component: {fileID: 1698728101}
+  - component: {fileID: 1698728105}
   m_Layer: 0
   m_Name: Extra points
   m_TagString: Untagged
@@ -7246,12 +7265,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698728100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 73.2, y: 0, z: 35.7}
+  m_LocalPosition: {x: 73.2, y: -1.5, z: 35.7}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1698728105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698728100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7652f54de055223498eabd310e3d582d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player3: {fileID: 0}
+  player4: {fileID: 0}
+  tagFilter: Player_1
 --- !u!1 &1741870968
 GameObject:
   m_ObjectHideFlags: 1
@@ -7710,7 +7744,7 @@ GameObject:
   - component: {fileID: 1865111054}
   m_Layer: 0
   m_Name: Player3
-  m_TagString: Player
+  m_TagString: Player_extra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7805,6 +7839,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 0
+  with_ball: 0
+  tagFilter: 
 --- !u!1 &1866559963
 GameObject:
   m_ObjectHideFlags: 0

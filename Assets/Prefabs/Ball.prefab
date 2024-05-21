@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8459759694911687608}
   - component: {fileID: 8459759694911687609}
   - component: {fileID: 8459759694911687610}
-  - component: {fileID: 8459759694911687611}
   - component: {fileID: 8459759694911687612}
+  - component: {fileID: -6979866516664161434}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Red_ball
@@ -97,21 +97,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8459759694911687611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8459759694911687613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52dae2a4b028d924d8807218aa124a4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagFilter: Player_1
-  player1: {fileID: 0}
-  playerScript: {fileID: 0}
 --- !u!54 &8459759694911687612
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,3 +113,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-6979866516664161434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459759694911687613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52dae2a4b028d924d8807218aa124a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagFilter: Player_1
+  spawnPoint: {fileID: 0}
+  player1: {fileID: 0}
+  playerScript: {fileID: 0}

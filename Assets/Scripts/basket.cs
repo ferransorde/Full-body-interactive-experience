@@ -9,9 +9,11 @@ public class basket : MonoBehaviour
     bool follow = false;
     public GameObject ball;
     public BallSpawnerRed ballSpawner;
+    public GameObject player1;
     public TextMeshProUGUI countdisplay1;
     public int Count1 { get { return count1; } }
     private int count1;
+    public PlayerMovement playerScript;
     
     
 
@@ -19,6 +21,8 @@ public class basket : MonoBehaviour
     void Start()
     {
         SetCountText();
+        player1 = GameObject.Find("Player1");
+        playerScript = player1.GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -34,7 +38,7 @@ public class basket : MonoBehaviour
 
     private void OnTriggerEnter (Collider other) 
     {
-        if (other.CompareTag(tagFilter)) 
+        if (other.CompareTag(tagFilter) && playerScript.with_ball) 
         {
             Destroy(other.gameObject);
             ballSpawner.RemoveBallFromList(gameObject);
