@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Level2.unity
     guid: a436cb38f3f22cd4ab31ec7e1ef3ec13
+  - enabled: 1
+    path: Assets/Scenes/Winner2_BluePlayer.unity
+    guid: 054badd5e0e9f1a4d888ff8d3ed04cce
+  - enabled: 1
+    path: Assets/Scenes/Winner2_RedPlayer.unity
+    guid: b63990600f5498445be591456289d4ab
+  - enabled: 1
+    path: Assets/Scenes/Winner2_Tie.unity
+    guid: 94833a55083faca41a2757097f88e9cf
   m_configObjects: {}
