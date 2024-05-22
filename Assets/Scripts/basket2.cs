@@ -28,7 +28,7 @@ public class basket2 : MonoBehaviour
     }
 
     void SetCountText(){
-        countdisplay2.text ="Points: " + count2.ToString();
+        countdisplay2.text = count2.ToString();
     }
     
 
