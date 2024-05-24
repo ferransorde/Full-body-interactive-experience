@@ -7,8 +7,8 @@ public class BallSpawnerRed : MonoBehaviour
     public bool canSpawn = true; 
     public GameObject ballPrefab; 
     public List<Transform> ballSpawnPositions = new List<Transform>(); 
-    public float minTimeBetweenSpawns = 1f;
-    public float maxTimeBetweenSpawns = 3f;
+    public float minTimeBetweenSpawns;
+    public float maxTimeBetweenSpawns;
     public float spawnOffsetRange = 1f;
     //public float timeBetweenSpawns ;
     private List<GameObject> ballList = new List<GameObject>();
