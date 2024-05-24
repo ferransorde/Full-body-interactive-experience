@@ -488,6 +488,14 @@ public class PluginConnector : MonoBehaviour
         {
             players[playerSelected - 1].transform.Translate(Vector3.right * Time.deltaTime * trackingDisabledPlayerSpeed);
         }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            players[playerSelected - 1].transform.Translate(Vector3.up * Time.deltaTime * trackingDisabledPlayerSpeed);
+        }
+        if (Input.GetKey(KeyCode.Z))
+        {
+            players[playerSelected - 1].transform.Translate(Vector3.up * -1 * Time.deltaTime * trackingDisabledPlayerSpeed);
+        }
     }
 
     private void UpdateInterfaceText()

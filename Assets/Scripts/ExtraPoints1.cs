@@ -36,7 +36,7 @@ public class ExtraPoints1 : MonoBehaviour
     {
         if (other.CompareTag(tagFilter))
         {
-            float objectTopY = transform.position.y;
+            float objectTopY = transform.position.y + GetComponent<Collider>().bounds.extents.y;
 
             if (other.gameObject == player3)
             {
