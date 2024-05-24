@@ -32,7 +32,7 @@ public class basket : MonoBehaviour
     }
 
     void SetCountText(){
-        countdisplay1.text ="Points: " + count1.ToString();
+        countdisplay1.text = count1.ToString();
     }
     
 

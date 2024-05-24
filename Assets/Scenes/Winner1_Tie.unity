@@ -2245,6 +2245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 0
+  with_ball: 0
+  tagFilter: 
 --- !u!65 &483883240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3507,6 +3509,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 0
+  with_ball: 0
+  tagFilter: 
 --- !u!65 &763629981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3604,7 +3608,9 @@ MonoBehaviour:
   tagFilter: Ball
   ball: {fileID: 0}
   ballSpawner: {fileID: 794735726}
+  player1: {fileID: 0}
   countdisplay1: {fileID: 1291196193}
+  playerScript: {fileID: 0}
 --- !u!135 &778428848
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3717,7 +3723,9 @@ MonoBehaviour:
   - {fileID: 1804521658}
   - {fileID: 85834967}
   - {fileID: 653196749}
-  timeBetweenSpawns: 5
+  minTimeBetweenSpawns: 1
+  maxTimeBetweenSpawns: 3
+  spawnOffsetRange: 1
 --- !u!4 &794735727
 Transform:
   m_ObjectHideFlags: 0
@@ -3798,7 +3806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagFilter: Ball
   ball: {fileID: 0}
-  ballSpawner: {fileID: 794735726}
+  ballSpawner: {fileID: 0}
   countdisplay2: {fileID: 121040941}
 --- !u!135 &940637692
 SphereCollider:
@@ -4425,6 +4433,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 0
+  with_ball: 0
+  tagFilter: 
 --- !u!65 &1151668550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4653,7 +4663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeValue: 5
-  LevelToLoad: Level3
+  LevelToLoad: Level2
 --- !u!102 &1169000984
 TextMesh:
   serializedVersion: 3
@@ -4922,6 +4932,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 0
+  with_ball: 0
+  tagFilter: 
 --- !u!1 &1266383783
 GameObject:
   m_ObjectHideFlags: 0
@@ -5556,6 +5568,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 1
+  with_ball: 0
+  tagFilter: 
 --- !u!65 &1440896349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6148,6 +6162,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 0
+  with_ball: 0
+  tagFilter: 
 --- !u!1 &1483708435
 GameObject:
   m_ObjectHideFlags: 0
@@ -6465,6 +6481,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 0
+  with_ball: 0
+  tagFilter: 
 --- !u!65 &1554760528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7350,7 +7368,7 @@ TextMesh:
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4278241535
+    rgba: 4278190080
 --- !u!23 &1669652965
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7959,6 +7977,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: {x: 0, y: 0, z: 0, w: 0}
   manual: 0
+  with_ball: 0
+  tagFilter: 
 --- !u!1 &1866559963
 GameObject:
   m_ObjectHideFlags: 0
@@ -8263,8 +8283,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278243839
-  m_fontColor: {r: 1, g: 0.81903887, b: 0, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

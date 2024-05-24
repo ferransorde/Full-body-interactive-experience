@@ -12,6 +12,7 @@ TagManager:
   - Player_2
   - Blue_ball
   - Player_extra
+  - Wall
   layers:
   - Default
   - TransparentFX
