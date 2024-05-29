@@ -1,58 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine;
 
 public class WinnerPlayer : MonoBehaviour
 {
-    private int redpoints;
-    private int bluepoints;
-    public basket RedBasket;
-    public basket2 BlueBasket;
-    
-    
-    TextMesh Winner;
-    // Start is called before the first frame update
+    public string crowdSoundFileName = "crowdSound"; // Name of your sound file without extension
+
+    private AudioSource audioSource;
+
+    // Assuming these variables are set somewhere in your game logic
+    private bool isPlayer1Winner;
+    private bool isPlayer2Winner;
+
     void Start()
     {
-        int count1 = RedBasket.Count1;
-        redpoints= count1;
-
-        int count2 = BlueBasket.Count2;
-        bluepoints= count2;
-    
-        Winner= GetComponent<TextMesh>();
+        audioSource = GetComponent<AudioSource>();
+        DetermineWinnerAndPlaySound();
     }
 
-    void Update()
+    void DetermineWinnerAndPlaySound()
     {
-        UpdateCount1();
-        UpdateCount2();
-        DisplayWinner();
-    }
-    void DisplayWinner(){
-        if(redpoints> bluepoints){
-            Winner.text= "Red Player";
-        }else if(redpoints< bluepoints){
-            Winner.text= "Blue Player";
-        }else if(redpoints== bluepoints){
-            Winner.text= "Tie!";
+        if (isPlayer1Winner || isPlayer2Winner)
+        {
+            PlayCrowdSound();
         }
-        
-
-    
     }
 
-    void UpdateCount1()
+    void PlayCrowdSound()
     {
-        int updatedCount1 = RedBasket.Count1; // Get the latest value
-        redpoints= updatedCount1;
+        AudioClip crowdSound = Resources.Load<AudioClip>(crowdSoundFileName);
+        if (crowdSound != null)
+        {
+            audioSource.clip = crowdSound;
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("Crowd sound not found in Resources folder");
+        }
     }
 
-    void UpdateCount2()
+    // Methods to set the winner (these would be called from your game logic)
+    public void SetPlayer1Winner()
     {
-        int updatedCount2 = BlueBasket.Count2; // Get the latest value
-        bluepoints= updatedCount2;
+        isPlayer1Winner = true;
+        isPlayer2Winner = false;
+    }
+
+    public void SetPlayer2Winner()
+    {
+        isPlayer1Winner = false;
+        isPlayer2Winner = true;
+    }
+
+    public void SetTie()
+    {
+        isPlayer1Winner = false;
+        isPlayer2Winner = false;
     }
 }
