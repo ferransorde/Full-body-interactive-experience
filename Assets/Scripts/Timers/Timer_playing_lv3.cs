@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Timer_playing_lv2 : MonoBehaviour {
+public class Timer_playing_lv3 : MonoBehaviour {
     public float timeValue = 120; 
     TextMesh timerText;
     private string LevelToLoad;
@@ -53,13 +53,13 @@ public class Timer_playing_lv2 : MonoBehaviour {
 
     void DisplayWinner(){
         if(redpoints> bluepoints){
-            LevelToLoad= "Winner2_RedPlayer";
+            LevelToLoad= "Winner3_RedPlayer";
             WinnerTrack.redWins+=1;
         }else if(redpoints< bluepoints){
-            LevelToLoad= "Winner2_BluePlayer";
+            LevelToLoad= "Winner3_BluePlayer";
             WinnerTrack.blueWins+=1;
         }else if(redpoints== bluepoints){
-            LevelToLoad= "Winner2_Tie";
+            LevelToLoad= "Winner3_Tie";
             WinnerTrack.tieWins+=1;
         }
         

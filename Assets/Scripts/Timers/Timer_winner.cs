@@ -3,28 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Timer_playing_lv2 : MonoBehaviour {
-    public float timeValue = 120; 
+public class Timer_winner : MonoBehaviour {
+    public float timeValue; 
     TextMesh timerText;
     private string LevelToLoad;
     private int redpoints;
     private int bluepoints;
-    public basket RedBasket;
-    public basket2 BlueBasket;
+    
 
     void Start () {
         timerText = GetComponent<TextMesh>();
-        int count1 = RedBasket.Count1;
+        int count1 = WinnerTrack.redWins;
         redpoints= count1;
 
-        int count2 = BlueBasket.Count2;
+        int count2 = WinnerTrack.blueWins;
         bluepoints= count2;
+
+        
     }
 
     void Update()
     {
-        UpdateCount1();
-        UpdateCount2();
         if (timeValue> 0){
             timeValue-= Time.deltaTime;
 
@@ -52,28 +51,19 @@ public class Timer_playing_lv2 : MonoBehaviour {
     }
 
     void DisplayWinner(){
-        if(redpoints> bluepoints){
-            LevelToLoad= "Winner2_RedPlayer";
-            WinnerTrack.redWins+=1;
+        if((redpoints> bluepoints)){
+            LevelToLoad= "WinnerEnding_RedPlayer";
+            
         }else if(redpoints< bluepoints){
-            LevelToLoad= "Winner2_BluePlayer";
-            WinnerTrack.blueWins+=1;
+            LevelToLoad= "WinnerEnding_BluePlayer";
+            
         }else if(redpoints== bluepoints){
-            LevelToLoad= "Winner2_Tie";
-            WinnerTrack.tieWins+=1;
+            LevelToLoad= "WinnerEnding_Tie";
+            
         }
         
     }
     
-    void UpdateCount1()
-    {
-        int updatedCount1 = RedBasket.Count1; // Get the latest value
-        redpoints= updatedCount1;
-    }
-
-    void UpdateCount2()
-    {
-        int updatedCount2 = BlueBasket.Count2; // Get the latest value
-        bluepoints= updatedCount2;
-    }
+  
 }
+
