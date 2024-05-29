@@ -14,6 +14,7 @@ public class basket : MonoBehaviour
     public int Count1 { get { return count1; } }
     private int count1;
     public PlayerMovement playerScript;
+    private float alturaBola;
     
     
 
@@ -23,6 +24,9 @@ public class basket : MonoBehaviour
         SetCountText();
         player1 = GameObject.Find("Player1");
         playerScript = player1.GetComponent<PlayerMovement>();
+        
+        alturaBola = ball.transform.position.z;
+
     }
 
     // Update is called once per frame
@@ -38,6 +42,7 @@ public class basket : MonoBehaviour
 
     private void OnTriggerEnter (Collider other) 
     {
+        float objectTopY = transform.position.z + GetComponent<Collider>().bounds.extents.z;
         if (other.CompareTag(tagFilter) && playerScript.with_ball) 
         {
             Destroy(other.gameObject);

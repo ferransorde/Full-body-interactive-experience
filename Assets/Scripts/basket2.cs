@@ -14,7 +14,7 @@ public class basket2 : MonoBehaviour
     public int Count2 { get { return count2; } }
     private int count2;
     public PlayerMovement playerScript;
-    
+    private float alturaBola;
     
 
     // Start is called before the first frame update
@@ -23,6 +23,8 @@ public class basket2 : MonoBehaviour
         SetCountText();
         player2 = GameObject.Find("Player2");
         playerScript = player2.GetComponent<PlayerMovement>();
+        alturaBola = ball.transform.position.z;
+
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class basket2 : MonoBehaviour
 
     private void OnTriggerEnter (Collider other) 
     {
+        float objectTopY = transform.position.z + GetComponent<Collider>().bounds.extents.z;
         if (other.CompareTag(tagFilter) && playerScript.with_ball) 
         {
             Destroy(other.gameObject);
