@@ -5,37 +5,37 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Welcome.unity
     guid: 6f4a8246b6af62c46bbe42d7232c9f56
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 7caa62cc387295b4f914c27933b17bf5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Winner1_Tie.unity
     guid: 5563df32dbc7e73419c54abd1c99d9d5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Winner1_BluePlayer.unity
     guid: 60c7e2d255004a840b145a9fd2fb85b6
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Winner1_RedPlayer.unity
     guid: e3dfa6a42737a4842971044d9679a356
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/End.unity
     guid: 62fd2e42a2860a348abb3b001ed886d8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Level3_proves.unity
     guid: d00f78c6b48b5474892a38ecc5c556bd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: a436cb38f3f22cd4ab31ec7e1ef3ec13
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Winner2_BluePlayer.unity
     guid: 054badd5e0e9f1a4d888ff8d3ed04cce
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Winner2_RedPlayer.unity
     guid: b63990600f5498445be591456289d4ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Winner2_Tie.unity
     guid: 94833a55083faca41a2757097f88e9cf
   - enabled: 1
