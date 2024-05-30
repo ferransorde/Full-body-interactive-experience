@@ -54,10 +54,13 @@ public class Timer_playing : MonoBehaviour {
     void DisplayWinner(){
         if(redpoints> bluepoints){
             LevelToLoad= "Winner1_RedPlayer";
+            WinnerTrack.redWins+=1;
         }else if(redpoints< bluepoints){
             LevelToLoad= "Winner1_BluePlayer";
+            WinnerTrack.blueWins+=1;
         }else if(redpoints== bluepoints){
             LevelToLoad= "Winner1_Tie";
+            WinnerTrack.tieWins+=1;
         }
         
     }

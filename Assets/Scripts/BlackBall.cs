@@ -13,17 +13,24 @@ public class BlackBall : MonoBehaviour
     private bool isPlayer3OnCube = false;
     private bool isPlayer4OnCube = false;
 
-    private int countply3 = 0;
-    private int countply4 = 0;
+    public int Count3 { get { return count3; } }
+    private int count3;
+    public int Count4 { get { return count4; } }
+    private int count4=0;
 
     private float alturaPlayer3;
     private float alturaPlayer4;
+
+    public basket redbasket;
+    public basket2 bluebasket;
 
     void Start()
     {
 
         player3 = GameObject.Find("Player3");
         player4 = GameObject.Find("Player4");
+        redbasket = FindObjectOfType<basket>();
+        bluebasket = FindObjectOfType<basket2>();
         if (player3 != null)
         {
             alturaPlayer3 = player3.transform.position.y;
@@ -45,7 +52,9 @@ public class BlackBall : MonoBehaviour
                 if (alturaPlayer3 > objectTopY)
                 {
                     isPlayer3OnCube = true;
-                    countply3++;
+                    count3++;
+                    redbasket.UpdateCount3(count3);
+                    
                     Destroy(gameObject);
                 }
             }
@@ -54,7 +63,9 @@ public class BlackBall : MonoBehaviour
                 if (alturaPlayer4 > objectTopY)
                 {
                     isPlayer4OnCube = true;
-                    countply4++;
+                    count4++;
+                    bluebasket.UpdateCount4(count4);
+
                     Destroy(gameObject);
                 }
             }

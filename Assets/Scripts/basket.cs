@@ -10,23 +10,26 @@ public class basket : MonoBehaviour
     public GameObject ball;
     public BallSpawnerRed ballSpawner;
     public GameObject player1;
-    public TextMeshProUGUI countdisplay1;
+    public TMP_Text countdisplay1;
     public int Count1 { get { return count1; } }
     private int count1;
     public PlayerMovement playerScript;
     private float alturaBola;
     
     
+    
 
     // Start is called before the first frame update
     void Start()
     {
+
         SetCountText();
         player1 = GameObject.Find("Player1");
         playerScript = player1.GetComponent<PlayerMovement>();
         
         alturaBola = ball.transform.position.z;
 
+    
     }
 
     // Update is called once per frame
@@ -51,6 +54,12 @@ public class basket : MonoBehaviour
             SetCountText();
             
         }
+    }
+
+    public void UpdateCount3(int count3)
+    {
+        count1 += count3; //when player steps on black ball
+        SetCountText();
     }
 
   

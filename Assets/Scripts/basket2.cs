@@ -10,7 +10,7 @@ public class basket2 : MonoBehaviour
     public GameObject ball;
     public BallSpawnerBlue ballSpawner;
     public GameObject player2;
-    public TextMeshProUGUI countdisplay2;
+    public TMP_Text countdisplay2;
     public int Count2 { get { return count2; } }
     private int count2;
     public PlayerMovement playerScript;
@@ -49,6 +49,11 @@ public class basket2 : MonoBehaviour
             SetCountText();
             
         }
+    }
+    public void UpdateCount4(int count4)
+    {
+        count2 += count4; //when player steps on black ball
+        SetCountText();
     }
 
     
