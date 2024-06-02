@@ -5623,7 +5623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0277de10648f142a3d0cb6988a4b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeValue: 30
+  timeValue: 180
   RedBasket: {fileID: 778428847}
   BlueBasket: {fileID: 940637691}
 --- !u!102 &1169000984
@@ -5634,7 +5634,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169000982}
-  m_Text: 02:00
+  m_Text: 03:00
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
