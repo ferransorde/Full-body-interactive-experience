@@ -4428,7 +4428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45aa6ccceb61e2f4a92ad720cee3f010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeValue: 5
+  timeValue: 45
   LevelToLoad: Level3
 --- !u!102 &1169000984
 TextMesh:

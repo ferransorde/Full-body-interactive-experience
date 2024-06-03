@@ -21,9 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Winner1_RedPlayer.unity
     guid: e3dfa6a42737a4842971044d9679a356
   - enabled: 0
-    path: Assets/Scenes/End.unity
-    guid: 62fd2e42a2860a348abb3b001ed886d8
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/Level3_proves.unity
     guid: d00f78c6b48b5474892a38ecc5c556bd
   - enabled: 1
@@ -48,14 +48,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Winner3_RedPlayer.unity
     guid: 2c10da94fc2a85a489e30db9055b8428
   - enabled: 1
+    path: Assets/Scenes/Winner3_Tie.unity
+    guid: b802131a2ea1d5f4e9e402f2b4b1a442
+  - enabled: 1
     path: Assets/Scenes/WinnerEnding_RedPlayer.unity
     guid: 6dc01428c71536646aa4c75b8b95bb83
   - enabled: 1
     path: Assets/Scenes/WinnerEnding_Tie.unity
     guid: 20f9df0e426b3844ebde11ff59680329
-  - enabled: 1
-    path: Assets/Scenes/Winner3_Tie.unity
-    guid: b802131a2ea1d5f4e9e402f2b4b1a442
   - enabled: 1
     path: Assets/Scenes/WinnerEnding_BluePlayer.unity
     guid: 6a676980eedbeca4fb67607d08605fcd

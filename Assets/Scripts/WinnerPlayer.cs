@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class WinnerPlayer : MonoBehaviour
 {
-    public string crowdSoundFileName = "crowdSound"; // Name of your sound file without extension
+    public string crowdSoundFileName = "crowdSound"; 
 
     private AudioSource audioSource;
 
-    // Assuming these variables are set somewhere in your game logic
+    
     private bool isPlayer1Winner;
     private bool isPlayer2Winner;
 
@@ -41,7 +41,7 @@ public class WinnerPlayer : MonoBehaviour
         }
     }
 
-    // Methods to set the winner (these would be called from your game logic)
+    
     public void SetPlayer1Winner()
     {
         isPlayer1Winner = true;

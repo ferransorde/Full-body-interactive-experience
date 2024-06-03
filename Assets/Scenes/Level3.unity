@@ -3056,7 +3056,7 @@ MonoBehaviour:
   cameras:
   - {fileID: 342261394}
   - {fileID: 2041817079}
-  enableTracking: 0
+  enableTracking: 1
   numberOfPlayers: 4
   numberOfBaseStations: 4
   screenToWorldPosTracking: 1
@@ -5623,7 +5623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0277de10648f142a3d0cb6988a4b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeValue: 180
+  timeValue: 120
   RedBasket: {fileID: 778428847}
   BlueBasket: {fileID: 940637691}
 --- !u!102 &1169000984

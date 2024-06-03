@@ -24,12 +24,12 @@ public class ExtraPoints : MonoBehaviour
     {
         if (other.gameObject == player3)
         {
-            if (!isPlayer3OnCube && countply3==0) //per contar quan trepitja el cubo, ja que "entra", despres surt per fer el moviment i torna a entrar
+            if (!isPlayer3OnCube && countply3==0) 
             {
                 isPlayer3OnCube = true;
                 countply3+=1;
             }
-            else //torna a ser isPlayer3OnCube quan entra pero com que ja ha entrat una vegada l'elimina
+            else 
             {
                 Destroy(gameObject);
             }
